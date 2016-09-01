@@ -1,0 +1,7 @@
+<index-page>
+  <collection: replace>
+    <table-plus: fields="titulo, lugar, fecha">
+      <titulo-view:><a with="&this_parent"/></titulo-view:> 
+    </table-plus:>
+  </collection>
+</index-page>

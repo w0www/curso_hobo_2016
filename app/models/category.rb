@@ -1,22 +1,17 @@
-class Curso < ActiveRecord::Base
+class Category < ActiveRecord::Base
 
   hobo_model # Don't put anything above this
 
   fields do
-    titulo :string, :name => true
-    fecha  :date
-    lugar :string
-    descripcion :text
+    nombre :string
     timestamps
   end
-  attr_accessible :titulo, :fecha, :alumnos, :lugar, :descripcion, :categories
+  attr_accessible :nombre, :cursos
 
 
   has_many :category_cursos, :dependent => :destroy
-  has_many :categories, :through => :category_cursos, :accessible => true
+  has_many :cursos, :through => :category_cursos
 
-  has_many :alumnos
-  children :alumnos
 
   # --- Permissions --- #
 

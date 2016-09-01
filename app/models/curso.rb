@@ -13,6 +13,8 @@ class Curso < ActiveRecord::Base
 
   has_many :alumnos
 
+  children :alumnos
+
   # --- Permissions --- #
 
   def create_permitted?

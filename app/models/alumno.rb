@@ -3,7 +3,7 @@ class Alumno < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    nombre :string
+    nombre :string, :name => true
     email  :email_address
     timestamps
   end

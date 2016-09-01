@@ -7,7 +7,9 @@ class Curso < ActiveRecord::Base
     fecha  :date
     timestamps
   end
-  attr_accessible :titulo, :fecha
+  attr_accessible :titulo, :fecha, :alumnos
+
+  has_many :alumnos
 
   # --- Permissions --- #
 

@@ -7,7 +7,11 @@ class Alumno < ActiveRecord::Base
     email  :email_address
     timestamps
   end
-  attr_accessible :nombre, :email
+
+  attr_accessible :nombre, :email, :curso, :curso_id
+
+
+  belongs_to :curso
 
   # --- Permissions --- #
 

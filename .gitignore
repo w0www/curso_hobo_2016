@@ -17,3 +17,6 @@
 /tmp
 app/views/taglibs/auto/**/*
 config/hobo_routes.rb
+/bin
+/test
+

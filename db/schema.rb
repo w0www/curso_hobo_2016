@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160901105106) do
+ActiveRecord::Schema.define(version: 20160901110644) do
+
+  create_table "alumnos", force: :cascade do |t|
+    t.string   "nombre"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cursos", force: :cascade do |t|
+    t.string   "titulo"
+    t.date     "fecha"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "crypted_password",          limit: 40

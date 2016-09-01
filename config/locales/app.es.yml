@@ -10,6 +10,14 @@
 
 es:
 
+  alumnos:
+    nav_item: Alumnos
+  categories:
+    nav_item: Categorías
+  cursos:
+    nav_item: Cursos
+
+
   attributes:
     created_at: Creado el
     updated_at: Actualizado el

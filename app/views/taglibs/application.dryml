@@ -12,3 +12,12 @@ you can place common code in this file. -->
     </header:>
   </card>
 </def>
+
+<def tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+    <nav-item href="#{base_url}/">Home</nav-item>
+    <nav-item with="&Alumno" if="&logged_in?"><t key="alumnos.nav_item"/></nav-item>
+    <nav-item with="&Category"><t key="categories.nav_item"/></nav-item>
+    <nav-item with="&Curso"><t key="cursos.nav_item"/></nav-item>
+  </navigation>
+</def>

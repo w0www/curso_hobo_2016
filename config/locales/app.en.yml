@@ -4,6 +4,14 @@
 en:
   hello: "Hello world"
 
+  alumnos:
+    nav_item: Alumns
+  categories:
+    nav_item: Categoríes
+  cursos:
+    nav_item: Curses
+
+
 #  attributes:
 #    created_at: Created at
 #    updated_at: Updated at

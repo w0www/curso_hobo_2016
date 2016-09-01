@@ -1,3 +1,14 @@
 <!-- this file is included by front_site.dryml, admin_site.dryml et al, so
 you can place common code in this file. -->
 
+
+<def tag="card" for="Alumno">
+  <card class="alumno" param="default" merge>
+    <header: param>
+      <h4 param="heading">
+        <a><name/></a>
+        <small><this.telefono /></small>
+      </h4>
+    </header:>
+  </card>
+</def>

@@ -12,6 +12,8 @@ class Alumno < ActiveRecord::Base
 
   attr_accessible :nombre, :email, :telefono, :genero, :curso, :curso_id
   
+  set_search_columns :nombre, :email, :telefono
+
   validates_presence_of :telefono, :email
 
   has_many :curso_alumnos, :dependent => :destroy

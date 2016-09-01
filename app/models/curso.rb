@@ -11,6 +11,7 @@ class Curso < ActiveRecord::Base
   end
   attr_accessible :titulo, :fecha, :alumnos, :lugar, :descripcion, :categories
 
+  set_search_columns :titulo, :lugar
 
   has_many :category_cursos, :dependent => :destroy
   has_many :categories, :through => :category_cursos, :accessible => true

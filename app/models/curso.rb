@@ -15,7 +15,8 @@ class Curso < ActiveRecord::Base
   has_many :category_cursos, :dependent => :destroy
   has_many :categories, :through => :category_cursos, :accessible => true
 
-  has_many :alumnos
+  has_many :curso_alumnos, :dependent => :destroy
+  has_many :alumnos, :through => :curso_alumnos, :accessible => true
   children :alumnos
 
   # --- Permissions --- #

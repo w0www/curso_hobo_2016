@@ -4,6 +4,6 @@ class AlumnosController < ApplicationController
 
   auto_actions :all, :except => :index
 
-  auto_actions_for :curso, :create
+  auto_actions_for :cursos, :create
 
 end

@@ -14,7 +14,8 @@ class Alumno < ActiveRecord::Base
   
   validates_presence_of :telefono, :email
 
-  belongs_to :curso
+  has_many :curso_alumnos, :dependent => :destroy
+  has_many :cursos, :through => :curso_alumnos, :accessible => true
 
   # --- Permissions --- #
 

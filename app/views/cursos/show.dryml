@@ -1,0 +1,5 @@
+<show-page>
+  <after-heading:>
+    <transition-buttons/>
+  </after-heading:>
+</show-page>

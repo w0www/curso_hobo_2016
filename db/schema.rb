@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160901114217) do
+ActiveRecord::Schema.define(version: 20160901121746) do
 
   create_table "alumnos", force: :cascade do |t|
     t.string   "nombre"
@@ -55,7 +55,12 @@ ActiveRecord::Schema.define(version: 20160901114217) do
     t.datetime "updated_at"
     t.string   "lugar"
     t.text     "descripcion"
+    t.string   "estado",        default: "cerrado"
+    t.datetime "key_timestamp"
+    t.date     "fecha_cierre"
   end
+
+  add_index "cursos", ["estado"], name: "index_cursos_on_estado"
 
   create_table "users", force: :cascade do |t|
     t.string   "crypted_password",          limit: 40

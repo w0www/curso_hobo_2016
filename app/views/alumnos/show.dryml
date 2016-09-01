@@ -1,0 +1,5 @@
+<show-page>
+  <field-list: skip="genero">
+    <telefono-view:><editor/></telefono-view:>
+  </field-list:>
+</show-page>

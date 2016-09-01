@@ -2,7 +2,10 @@ class FrontController < ApplicationController
 
   hobo_controller
 
-  def index; end
+  def index
+    @total_alumnos = Alumno.count
+    @total_cursos = Curso.count
+  end
 
   def summary
     if !current_user.administrator?

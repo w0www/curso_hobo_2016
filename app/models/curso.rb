@@ -21,7 +21,6 @@ class Curso < ActiveRecord::Base
   has_many :alumnos, :through => :curso_alumnos, :accessible => true
   children :alumnos
 
-
   # --- Ciclo de vida --- #
   lifecycle :state_field => :estado do
     state :cerrado, :default => :true
@@ -31,8 +30,17 @@ class Curso < ActiveRecord::Base
       self.update_attribute(:fecha_cierre, Date.today)
     end
   end
-
-
+  # --- Asignamos los colores --- #
+  def color
+    case estado
+      when "cerrado"
+        "#FFF8B0" #Amarillo
+      when "abierto"
+        "#A5FFAA" #Verde
+      else
+        ""
+    end
+  end
 
   # --- Permissions --- #
 

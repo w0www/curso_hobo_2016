@@ -1,7 +1,8 @@
 <index-page>
   <collection: replace>
     <table-plus: fields="titulo, lugar, fecha, estado">
-      <titulo-view:><a with="&this_parent"/></titulo-view:> 
+      <titulo-view:><a with="&this_parent"/></titulo-view:>
+      <estado-view: style="background-color:#{this_parent.color};" />
     </table-plus:>
   </collection>
 </index-page>

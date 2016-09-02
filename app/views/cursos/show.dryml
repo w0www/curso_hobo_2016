@@ -1,5 +1,5 @@
 <show-page>
-  <after-heading:>
-    <transition-buttons/>
-  </after-heading:>
+  <append-heading:>
+    <br/><br/><transition-buttons/>
+  </append-heading:>
 </show-page>
